@@ -1,0 +1,23 @@
+Initialize engine version: 4.5.0f6 (fd4616464986)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: Intel(R) HD Graphics Family (ID=0x116)
+    Vendor:   Intel
+    VRAM:     64 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.340 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+WARNING: Shader Unsupported: 'Toon/Basic Outline' - Pass 'OUTLINE' shader state not supported
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+Platform assembly: C:\Users\Alistair\Documents\Nu_MicroBooNE\test_Data\Managed\Boo.Lang.dll (this message is harmless)
