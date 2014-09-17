@@ -33,6 +33,8 @@ public class Mainmenucamera : MonoBehaviour {
 	
 	void Update ()
 	{
+		Screen.lockCursor = true;
+
 		if (axes == RotationAxes.MouseXAndY)
 		{
 			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
