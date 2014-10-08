@@ -3,7 +3,7 @@ using UnityEngine;
 
 [AddComponentMenu("Camera-Control/Keyboard Orbit")]
 
-public class KeyboardOrbit : MonoBehaviour {
+public class CameraOrbit : MonoBehaviour {
 	public Transform target;
 	public float distance = 20.0f;
 	public float zoomSpd = 2.0f;
