@@ -28,6 +28,11 @@ Now, if you have added any new files to your working directory that you would li
 
     git add .
     git commit -m "This is a test commit"
+    
+If you happen to delete files and would like to commit the change, do this instead:
+
+    git add --all
+    git commit -m "This is a test commit"
 
 Remember that git creates a local repository in you local directory. The add and commit commands above only send changes to that local repository. If you want the changes moved to the master repository (what's at https://github.com/bcarls/vRMicroBooNE_test_2), you need to perform the following:
 
