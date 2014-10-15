@@ -11,6 +11,6 @@
 /*.userprefs
 /*.pidb
 /*.booproj
-/*.exe
-/*~
-/*swp
+#/*.exe
+#/*~
+#/*swp
