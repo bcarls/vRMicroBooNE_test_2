@@ -34,7 +34,8 @@ function Update(){
   
   
   if (idleTimer == 0 ){
-    cam1.camera.active = true;
+    //cam1.camera.active = true;
+    cam1.active = true;
     cam2.camera.active = false;
     cam3.camera.active = false;
     cam4.camera.active = false;
