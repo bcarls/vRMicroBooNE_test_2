@@ -47,7 +47,7 @@ function Update () {
 
 
 	
-	Destroy(nu1.gameObject, 2);
+	Destroy(nu1.gameObject, 4);
     }
 }
 
