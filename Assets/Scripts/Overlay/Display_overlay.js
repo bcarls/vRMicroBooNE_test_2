@@ -10,5 +10,5 @@
  
  function OnGUI()
  {
-     GUI.DrawTexture(rect, image, ScaleMode.StretchToFill);
+    GUI.DrawTexture(rect, image, ScaleMode.ScaleAndCrop);
  }

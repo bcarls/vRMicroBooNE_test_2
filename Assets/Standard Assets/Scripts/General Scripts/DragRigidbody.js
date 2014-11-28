@@ -9,9 +9,8 @@ private var springJoint : SpringJoint;
 
 function Update ()
 {
-
 	// Make sure the user pressed the mouse down
-	if (!Input.GetKey (KeyCode.E) )
+	if (!Input.GetMouseButtonDown (0))
 		return;
 
 	var mainCamera = FindCamera();
@@ -75,8 +74,8 @@ function DragObject (distance : float)
 
 function FindCamera ()
 {
-	if (GetComponent.<Camera>())
-		return GetComponent.<Camera>();
+	if (camera)
+		return camera;
 	else
 		return Camera.main;
 }
