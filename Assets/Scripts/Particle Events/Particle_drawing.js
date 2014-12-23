@@ -2,7 +2,7 @@
 import SimpleJSON;
 import System.IO;
 
-var drawingdot : Rigidbody2D;
+var drawingdot : Rigidbody;
 var spacepoint : Vector3;
 var referencepoint : Vector3;
 referencepoint = transform.position;
@@ -54,22 +54,24 @@ function Test() {
 	
 	
 	var i : int;
-	var clone: Rigidbody2D;
+	var clone: Rigidbody;
 	i = 1;
 	var imax : int = 1700;
 	var xs = new Array ();
 	var ys = new Array ();
 	var zs = new Array ();
+	var istring : new Array();
 	
 	var x = new Array ();
 	var y = new Array ();
 	var z = new Array ();
 	
 	for (i=0; i<imax; i++) {
+		istring = i.ToString();
 		//Creating the positions for each in-game spacepoint
-		xs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][i]["xyz"][0].ToString()));
-		ys[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][i]["xyz"][1].ToString()));
-        zs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][i]["xyz"][2].ToString()));
+		xs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][0]).ToString());
+		ys[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][1]).ToString());
+        zs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][2]).ToString());
     	
     	x[i] = float.Parse(xs[i]);
     	y[i] = float.Parse(ys[i]);
