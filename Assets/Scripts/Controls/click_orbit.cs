@@ -8,7 +8,7 @@ using System.Collections;
 
 public class click_orbit : MonoBehaviour {
 
-	public Camera camera;
+	public Camera camera1;
 	public Vector3 Playerloc;
 	public Vector3 Zoomloc; 
 	public Vector3 cam1loc;
@@ -25,20 +25,20 @@ public class click_orbit : MonoBehaviour {
 	public int yMaxLimit = 877;
 	public int esc_enable = 1;
 
-
+	private bool mouseover;
 	private float x1 = 0.0f;
 	private float y1 = 0.0f;
 
 
-	// Use this for initialization
-	void Start () {
 
-		Playerloc = camera.transform.position; //Player Camera location
+	void Start () {
+		mouseover = false;
+		Playerloc = camera1.transform.position;
 		Vector3 angles = transform.eulerAngles;
 		x1 = angles.y;
 		y1 = angles.x;
 		
-		// Make the rigid body not change rotation
+
 		if (rigidbody)
 			rigidbody.freezeRotation = true;
 
@@ -50,49 +50,53 @@ public class click_orbit : MonoBehaviour {
 
 
 
-	// Update is called once per frame
+
 	void Update () {
-		Playerloc = camera.transform.position;
+		Playerloc = camera1.transform.position;
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
-		float currentFOV = camera.fieldOfView;
+		float currentFOV = camera1.fieldOfView;
 
 		//ScrollWheel controls for zooming in and out
 		if (scroll != 0.0f)
 		{
-			camera.fieldOfView = Mathf.Lerp(currentFOV, scroll, Time.time * zoomSpeed);
+			camera1.fieldOfView = Mathf.Lerp(currentFOV, scroll, Time.time * zoomSpeed);
 			esc_enable = 0;
 			if (Input.GetButtonDown("Escape"))
 			{
-				camera.fieldOfView = currentFOV;
+				camera1.fieldOfView = currentFOV;
 			}
 		}
 
+		if (mouseover) {
+			//Ray zRay = new Ray(camera1.ScreenPointToRay(Input.mousePosition));
+
+			//Left click swapping to target
+			if (Input.GetMouseButtonDown (0)) {
+			//	camera1.transform.position = zRay;
+				
+				
+				x1 -= Input.GetAxis ("Horizontal") * xSpeed * 0.02f;
+				y1 += Input.GetAxis ("Vertical") * ySpeed * 0.02f;
+				
+				y1 = ClampAngle(y1, yMinLimit, yMaxLimit);
+				
+				//orbitdist += Input.GetButtonDown ("Mouse ScrollWheel") *zoomSpd* 0.02f;
+				//distance += Input.GetAxis("Fire2") *zoomSpd* 0.02f;
+				
+				Quaternion rotation = Quaternion.Euler (y1, x1, 0.0f);
+				Vector3 position = rotation * new Vector3 (0.0f, 0.0f, -orbitdist) + target.position;
+				
+				transform.rotation = rotation;
+				transform.position = position;
+			}
+
+		}
 
 		}
 
 	//Target swapping with mouse will only work when mouse is hovering over a target, this is the function
 	void OnMouseOver() {
-		Zoomloc = target.transform.position;
-
-			//Left click swapping to target
-				if (Input.GetMouseButtonDown (0)) {
-				camera.transform.position = Zoomloc;
-
-
-						x1 -= Input.GetAxis ("Horizontal") * xSpeed * 0.02f;
-						y1 += Input.GetAxis ("Vertical") * ySpeed * 0.02f;
-			
-						y1 = ClampAngle(y1, yMinLimit, yMaxLimit);
-			
-						//orbitdist += Input.GetButtonDown ("Mouse ScrollWheel") *zoomSpd* 0.02f;
-						//distance += Input.GetAxis("Fire2") *zoomSpd* 0.02f;
-			
-						Quaternion rotation = Quaternion.Euler (y1, x1, 0.0f);
-						Vector3 position = rotation * new Vector3 (0.0f, 0.0f, -orbitdist) + target.position;
-			
-						transform.rotation = rotation;
-						transform.position = position;
-				}
+		mouseover = true;
 		}
 
 	

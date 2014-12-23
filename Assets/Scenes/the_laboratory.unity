@@ -259,69 +259,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 727664131}
   m_GameObject: {fileID: 101034597}
   m_Mesh: {fileID: 4300008, guid: 6dd66ba82d5ebe942b2ce12599204868, type: 3}
---- !u!1 &116603870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 116603872}
-  - 108: {fileID: 116603871}
-  m_Layer: 0
-  m_Name: Activation light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &116603871
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 116603870}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Type: 2
-  m_Color: {r: 1, g: .0206896402, b: 0, a: 1}
-  m_Intensity: 2.46000004
-  m_Range: 50
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &116603872
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 116603870}
-  m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: 0, y: -0, z: .713755667}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 643883241}
-  m_RootOrder: 0
 --- !u!1 &175819659
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +919,7 @@ Transform:
   m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
   m_LocalPosition: {x: 25, y: 5, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 116603872}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!95 &643883242
@@ -1037,11 +973,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643883240}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c797e2229f3ac604fa9f6f20f4b2948f, type: 3}
+  m_Script: {fileID: 11500000, guid: 64f849437b2ca38408140cd8388cf1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activ_light: {fileID: 0}
 --- !u!1 &696014547
 GameObject:
   m_ObjectHideFlags: 0
