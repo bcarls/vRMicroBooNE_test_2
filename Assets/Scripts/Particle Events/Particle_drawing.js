@@ -6,7 +6,7 @@ var drawingdot : Rigidbody;
 var spacepoint : Vector3;
 var referencepoint : Vector3;
 referencepoint = transform.position;
-/*
+
 function P( aText : String)
 {
 
@@ -15,7 +15,7 @@ function P( aText : String)
 function Start () {
 
 }
-
+/*
 function Update () {
 	if(Input.GetButtonDown("H")){
 	Test();
@@ -32,13 +32,13 @@ function Test() {
     // Wait for the download to complete
     yield www;
     var jsonString = www.data;
-
-    // To read in from a file
+/*
+    // To read in from a file **LEAVE THIS COMMENTED OUT FOR NOW**
     var sr = new StreamReader(Application.dataPath + "/" + fileName);
     var jsonString = sr.ReadToEnd();
     sr.Close();
 
-    
+    //var N = JSONNode.Parse(jsonString);
     var N = JSONNode.Parse(jsonString);
 
     P("The event number is: ");
@@ -60,7 +60,7 @@ function Test() {
 	var xs = new Array ();
 	var ys = new Array ();
 	var zs = new Array ();
-	var istring : new Array();
+	var istring = new Array();
 	
 	var x = new Array ();
 	var y = new Array ();
@@ -69,17 +69,20 @@ function Test() {
 	for (i=0; i<imax; i++) {
 		istring = i.ToString();
 		//Creating the positions for each in-game spacepoint
-		xs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][0]).ToString());
-		ys[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][1]).ToString());
-        zs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][2]).ToString());
+		//xs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][0]).ToString());
+		xs[i] = ((N(["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][0])).ToString());
+		//ys[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][1]).ToString());
+        y[i] = ((N(["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][1])).ToString());
+        //zs[i] = (P(N["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][2]).ToString());
+    	zs[i] = ((N( ["record"]["spacepoints"]["recob::SpacePoints_spacepointfinder__Reco3D"][istring]["xyz"][2])).ToString());
     	
     	x[i] = float.Parse(xs[i]);
     	y[i] = float.Parse(ys[i]);
     	z[i] = float.Parse(zs[i]);
     	
-    	//spacepoint = referencepoint + Vector3(x[i],y[i],z[i]);
+    	spacepoint = referencepoint + Vector3(x[i],y[i],z[i]);
     	
-    	//clone = Instantiate(drawingdot, spacepoint, Quarternion.identity);
+    	clone = clInstantiate(drawingdot, spacepoint, 1);
         
 	 } 
 }

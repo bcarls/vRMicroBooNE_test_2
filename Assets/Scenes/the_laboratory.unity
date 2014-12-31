@@ -358,13 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 1
-  sensitivityX: 15
-  sensitivityY: 0
-  minimumX: -360
-  maximumX: 360
-  minimumY: 0
-  maximumY: 0
 --- !u!143 &175819663
 CharacterController:
   m_ObjectHideFlags: 0
@@ -714,13 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 2
-  sensitivityX: 10
-  sensitivityY: 10
-  minimumX: 0
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
 --- !u!124 &430011769
 Behaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f849437b2ca38408140cd8388cf1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activ_light: {fileID: 0}
 --- !u!1 &696014547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,7 +2060,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870580104}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1870580106
 Behaviour:
   m_ObjectHideFlags: 0
@@ -2096,7 +2081,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870580104}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
@@ -2140,7 +2125,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1870580104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c797e2229f3ac604fa9f6f20f4b2948f, type: 3}
   m_Name: 
