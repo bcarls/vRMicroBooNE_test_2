@@ -6,16 +6,16 @@ public class Main_Menu_manager : MonoBehaviour
 	public Main_Menu CurrentMenu;
 	public void Start()
 	{
-				ShowMenu (CurrentMenu);
-		}
-
+		ShowMenu (CurrentMenu);
+	}
+	
 	public void ShowMenu(Main_Menu menu)
 	{
-				if (CurrentMenu != null) 
-						CurrentMenu.IsOpen = false;
-				
-				CurrentMenu = menu;
-				CurrentMenu.IsOpen = true;
-
-		}
+		if (CurrentMenu != null) 
+			CurrentMenu.IsOpen = false;
+		
+		CurrentMenu = menu;
+		CurrentMenu.IsOpen = true;
+		
+	}
 }

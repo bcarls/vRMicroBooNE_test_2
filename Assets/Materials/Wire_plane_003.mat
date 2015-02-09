@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Wire_plane_003
-  m_Shader: {fileID: 36, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 35, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -17,16 +17,16 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Texture: {fileID: 2800000, guid: b0fe24d86181a5e40939c4d9d3bd96a4, type: 3}
+          m_Scale: {x: 24, y: 15}
+          m_Offset: {x: 2, y: 2}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
+          m_Texture: {fileID: 2800000, guid: 14ff68f7520aa4441af8ef6937a1b7c2, type: 3}
+          m_Scale: {x: 24, y: 15}
+          m_Offset: {x: 2, y: 2}
       data:
         first:
           name: _ParallaxMap
@@ -38,17 +38,21 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .078125
+        second: .0661035925
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: .0197321437
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .800000012, g: .421000004, b: .103500001, a: .725490212}
+        second: {r: .83088237, g: .56939882, b: .177173465, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 0}
+        second: {r: .926470578, g: .8917045, b: .422361612, a: 0}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}

@@ -16,17 +16,17 @@ public class Main_Menu : MonoBehaviour
 		_canvasGroup = GetComponent<CanvasGroup>();
 
 		var rect = GetComponent<RectTransform> ();
-		rect.offsetMax = rect.offestMin = new Vector2(0, 0);
+		rect.offsetMax = rect.offsetMin = new Vector2(0, 0);
 		}
 	public void Update ()
 	{
 		if(!_animator.GetCurrentAnimatorStateInfo(0).IsName ("Open")){
 		
-			_canvasGroup.blockRaycasts = _canvasgroup.interactable = false;
+			_canvasGroup.blocksRaycasts = _canvasGroup.interactable = false;
 		}
 		else
 		{
-			_canvasGroup.blockRaycasts = _canvasGroup.interactable = true;
+			_canvasGroup.blocksRaycasts = _canvasGroup.interactable = true;
 		
 		   }
 	}
