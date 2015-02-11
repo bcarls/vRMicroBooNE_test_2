@@ -39,13 +39,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -382.250061
-        inSlope: 554.700073
-        outSlope: 554.700073
+        inSlope: 526.848083
+        outSlope: 526.848083
         tangentMode: 10
       - time: .833333313
-        value: 80
-        inSlope: 554.700073
-        outSlope: 554.700073
+        value: 56.7900009
+        inSlope: 526.848083
+        outSlope: 526.848083
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -58,13 +58,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 83.4999237
-        inSlope: -832.260132
-        outSlope: -832.260132
+        inSlope: -804.407959
+        outSlope: -804.407959
         tangentMode: 10
       - time: .833333313
-        value: -610.050171
-        inSlope: -832.260132
-        outSlope: -832.260132
+        value: -586.840027
+        inSlope: -804.407959
+        outSlope: -804.407959
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -141,13 +141,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: -382.250061
-        inSlope: 554.700073
-        outSlope: 554.700073
+        inSlope: 526.848083
+        outSlope: 526.848083
         tangentMode: 10
       - time: .833333313
-        value: 80
-        inSlope: 554.700073
-        outSlope: 554.700073
+        value: 56.7900009
+        inSlope: 526.848083
+        outSlope: 526.848083
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -160,13 +160,13 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 83.4999237
-        inSlope: -832.260132
-        outSlope: -832.260132
+        inSlope: -804.407959
+        outSlope: -804.407959
         tangentMode: 10
       - time: .833333313
-        value: -610.050171
-        inSlope: -832.260132
-        outSlope: -832.260132
+        value: -586.840027
+        inSlope: -804.407959
+        outSlope: -804.407959
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
